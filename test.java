@@ -6,17 +6,17 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 /**
- * The test class Clock1.
+ * The test class test.
  *
  * @author  (your name)
  * @version (a version number or a date)
  */
-public class Clock1
+public class test
 {
     /**
-     * Default constructor for test class Clock1
+     * Default constructor for test class test
      */
-    public Clock1()
+    public test()
     {
     }
 
@@ -41,13 +41,20 @@ public class Clock1
     }
 
     @Test
-    public void UnitTest()
+    public void Same()
     {
-        ClockTime clockTim3 = new ClockTime(11, 01, 01);
-        ClockTime clockTim4 = new ClockTime(11, 01, 01);
-        assertEquals(true, clockTim3.equals(clockTim4));
-        ClockTime clockTim5 = new ClockTime(12, 02, 02);
-        assertEquals(false, clockTim3.equals(clockTim5));
+        ClockTime clockTim1 = new ClockTime(11, 11, 11);
+        ClockTime clockTim2 = new ClockTime(11, 11, 11);
+        assertEquals(true, clockTim1.equals(clockTim2));
+    }
+
+    @Test
+    public void Diff()
+    {
+        ClockTime clockTim1 = new ClockTime(11, 11, 11);
+        ClockTime clockTim2 = new ClockTime(12, 12, 12);
+        assertEquals(false, clockTim1.equals(clockTim2));
     }
 }
+
 
