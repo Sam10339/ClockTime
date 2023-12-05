@@ -13,6 +13,10 @@ import org.junit.jupiter.api.Test;
  */
 public class test
 {
+    private ClockTime clockTim1;
+    private ClockTime clockTim2;
+
+    
     /**
      * Default constructor for test class test
      */
@@ -28,6 +32,8 @@ public class test
     @BeforeEach
     public void setUp()
     {
+        clockTim1 = new ClockTime(11, 11, 11);
+        clockTim2 = new ClockTime(11, 11, 11);
     }
 
     /**
@@ -55,6 +61,13 @@ public class test
         ClockTime clockTim2 = new ClockTime(12, 12, 12);
         assertEquals(false, clockTim1.equals(clockTim2));
     }
+
+    @Test
+    public void fixtures()
+    {
+        assertEquals(11, clockTim1.getHour());
+    }
 }
+
 
 
